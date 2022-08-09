@@ -51,6 +51,13 @@
             <label for="Category" class="form-label">Category</label>
             <input type="text" class="form-control" id="Category" name="Category" value="{{asset.Category}}" aria-describedby="emailHelp" >
         </div>
+        <div class="mb-3">
+        <label for="Type" class="form-label">Type</label>
+        <select name="Type">
+          {% for Type in Types %}
+              <option value="{{ Type }}">{{ Type }}</option>
+          {% endfor %}
+      </select></div>
         
         <button type="submit" class="btn btn-primary">Update</button>
       </form>
